@@ -8,7 +8,7 @@ cur::Triangle::Triangle() {
 
 }
 
-cur::Triangle::Triangle(Xyz a, Xyz b, Xyz c) {
+cur::Triangle::Triangle(Point a, Point b, Point c) {
 	this->a = a;
 	this->b = b;
 	this->c = c;
@@ -17,7 +17,7 @@ cur::Triangle::Triangle(Xyz a, Xyz b, Xyz c) {
 namespace sam {
 	namespace line_drawer {
 		std::ostream & operator<<(std::ostream & os, sam::line_drawer::Triangle const & triangle) {
-			std::cout << "\nA: " << triangle.a << "\nB: " << triangle.b << "\nC: " << triangle.c;
+			std::cout << "\nA " << triangle.a << "\nB " << triangle.b << "\nC " << triangle.c;
 			return os;
 		}
 	}

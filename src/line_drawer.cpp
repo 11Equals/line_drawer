@@ -3,13 +3,18 @@
 
 #include <iostream>
 
-#include "include/line.hpp"
+#include "include/lines.hpp"
+#include "include/random.hpp"
 
 namespace topx	= sam::line_drawer;
 namespace cur	= topx;
 
 namespace {
+    constexpr auto const AMOUNT_OF_LINES = size_t{ 1 };
     constexpr auto const LINE_THICKNESS_HALF = 0.005;
+    constexpr auto const LENGTH_VARIANCE_X = 1.0;
+    constexpr auto const LENGTH_VARIANCE_Y = 1.0;
+    constexpr auto const LENGTH_VARIANCE_Z = 1.0;
 }
 
 class Test {
@@ -25,13 +30,12 @@ std::ostream & operator <<(std::ostream & os, Test const & test) {
 
 int main()
 {
-    auto const LINE_01 = topx::Line(topx::Xyz(1.0, 0.0, 1.0), topx::Xyz(10.0, 0.0, 2.0), LINE_THICKNESS_HALF);
-    auto const LINE_02 = topx::Line(topx::Xyz(1.0, 0.0, 1.0), topx::Xyz(2.0, 0.0, 2.0), LINE_THICKNESS_HALF);
+    sam::line_drawer::random::generateSeed();
+    auto lines = cur::Lines();
 
+    lines.draw(AMOUNT_OF_LINES, LINE_THICKNESS_HALF, LENGTH_VARIANCE_X, LENGTH_VARIANCE_Y, LENGTH_VARIANCE_Z);
 
-    std::cout << "Hello World!\n";
-
-    std::cout << "Line: " << LINE_01;
+    std::cout << "Line: " << lines.getLines().front();
     
 
     int i;

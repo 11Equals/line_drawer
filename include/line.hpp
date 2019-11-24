@@ -11,11 +11,10 @@ namespace sam {
 		struct Line {
 			Triangle triangleA;
 			Triangle triangleB;
-			Xyz start, end;
+			Point start, end;
 			double lineThicknessHalf;
 
-			Line();
-			Line(Xyz start, Xyz end, double lineThicknessHalf);
+			Line(Point start, Point end, double lineThicknessHalf);
 
 			friend std::ostream & operator<<(std::ostream & os, sam::line_drawer::Line const & line);
 		};

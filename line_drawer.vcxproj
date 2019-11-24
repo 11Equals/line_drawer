@@ -19,13 +19,26 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\calculate.hpp" />
+    <ClInclude Include="include\lines.hpp" />
     <ClInclude Include="include\line.hpp" />
+    <ClInclude Include="include\point.hpp" />
+    <ClInclude Include="include\premade\line_01.hpp" />
+    <ClInclude Include="include\random.hpp" />
+    <ClInclude Include="include\rgba.hpp" />
+    <ClInclude Include="include\tex_coords.hpp" />
     <ClInclude Include="include\triangle.hpp" />
     <ClInclude Include="include\xyz.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\randomizer\random\main.cpp" />
     <ClCompile Include="src\line.cpp" />
+    <ClCompile Include="src\lines.cpp" />
     <ClCompile Include="src\line_drawer.cpp" />
+    <ClCompile Include="src\point.cpp" />
+    <ClCompile Include="src\random.cpp" />
+    <ClCompile Include="src\rgba.cpp" />
+    <ClCompile Include="src\tex_coords.cpp" />
     <ClCompile Include="src\triangle.cpp" />
     <ClCompile Include="src\xyz.cpp" />
   </ItemGroup>
@@ -101,7 +114,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)../randomizer</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -116,7 +129,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)../randomizer</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,7 +146,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)../randomizer</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -152,7 +165,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)../randomizer</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
